@@ -20,7 +20,8 @@ function getRepoName(remoteName) {
       match = REPO_NAME_RE.exec(stdout);
 
   if (!match) {
-    throw new Error('Could not find a repository on remote ' + remoteName);
+    return '/';
+    // throw new Error('Could not find a repository on remote ' + remoteName);
   } else {
     return match[1];
   }
